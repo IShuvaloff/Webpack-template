@@ -8,7 +8,7 @@
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist" // ! отправка на github-pages
+    "deploy": "gh-pages -d dist"
   },
   "author": "Шувалов И.А.",
   "license": "ISC",
