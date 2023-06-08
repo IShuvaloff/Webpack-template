@@ -2,6 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin'); // ! для взяти
 const MiniCssExtractPlugin = require('mini-css-extract-plugin'); // ! для извлечения стилей css из общего js-бандла в отдельный файл .css
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin'); // ! для оптимизации изображений
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin'); // ! установка иконки favicon
+const SpriteLoaderPlugin = require('svg-sprite-loader/plugin'); // ! для извлечения данных из созданного спрайта
 const path = require('path'); // ! глобальный системный путь к корневой папке (может различаться между разными ОС)
 
 // ! источник входных файлов .js и других
@@ -46,6 +47,9 @@ const plugins = [
       // ); // ! если нужно задать разные иконки для разных html-страниц, которые следует разместить в отдельной папке pages
     },
   }),
+
+  // ? работа с SVG-спрайтом
+  new SpriteLoaderPlugin(),
 ];
 
 // ! обработка файлов проекта
@@ -62,13 +66,24 @@ const modules = (env) => ({
     {
       // ? обработка векторных изображений
       test: /\.svg$/i,
-      type: 'asset/resource',
-      generator: {
-        filename: path.join('icons', '[name].[contenthash][ext]'), // ! изменить папку и имя файла для .svg-картинок
-      },
+      use: [
+        {
+          loader: 'svg-sprite-loader', // ! 2. создание SVG-спрайта из отдельных загруженных файлов
+          options: {
+            publicPath: 'icons/',
+            spriteFilename: (svgPath) =>
+              `sprite.[contenthash]${svgPath.substr(-4)}`,
+          },
+        },
+        'svgo-loader', // ! 1. загрузка svg-файлов
+      ],
+      // type: 'asset/resource', // ? это для отдельной подгрузки svg! сейчас это не нужно, т.к. делаем спрайт и вставляем svg инлайном (см. notifications.js)
+      // generator: {
+      //   filename: path.join('icons', '[name].[contenthash][ext]'), // ? изменить папку и имя файла для .svg-картинок
+      // },
     },
     {
-      // ? обработка файлов стилей
+      // ? обработка файлов стилей sass/scss
       test: /\.s[ac]ss$/i, // ! только файлы .sass, причем в конце имени
       use: [
         // 'style-loader', // #4... (Creates `style` nodes from JS strings)
@@ -76,6 +91,16 @@ const modules = (env) => ({
         'css-loader', // ! #3... (Translates CSS into CommonJS)
         'postcss-loader', // ! #2... (добавляет пост-обработку для разных браузеров)
         'sass-loader', // ! #1 в очереди (Compiles Sass to CSS)
+      ],
+    },
+    {
+      // ? обработка файлов стилей css
+      test: /\.css$/i,
+      use: [
+        // 'style-loader', // #4... (Creates `style` nodes from JS strings)
+        env.prod ? MiniCssExtractPlugin.loader : 'style-loader', // ! #4... (создает минифицированный блок стилей в отдельном файле .css для development)
+        'css-loader', // ! #3... (Translates CSS into CommonJS)
+        'postcss-loader', // ! #2... (добавляет пост-обработку для разных браузеров)
       ],
     },
     {
@@ -118,7 +143,7 @@ const optimization = {
 // ! сервер Webpack
 const devServer = {
   watchFiles: path.join(__dirname, 'src'), // ! наблюдатель за изменениями для авто-релодинга
-  port: 9000,
+  port: 9001,
   hot: true,
   historyApiFallback: true,
 };
