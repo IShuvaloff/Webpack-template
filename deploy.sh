@@ -17,3 +17,5 @@ git commit -m 'deploy'
 git push -f https://github.com/IShuvaloff/Webpack-template.git main:gh-pages
 
 cd -
+
+# ЧТО-ТО НЕ РАБОТАЕТ ЭТО КРОМЕ КАК НА VUE...
