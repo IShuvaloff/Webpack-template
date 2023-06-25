@@ -1,7 +1,7 @@
 {
   "name": "memo",
   "short_name": "memo",
-  "description": "Игра МЕМО",
+  "description": "Шаблон Webpack-приложения",
   "dir": "auto",
   "lang": "en-US",
   "display": "standalone",

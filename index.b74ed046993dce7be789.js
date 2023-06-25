@@ -431,7 +431,7 @@ var ___CSS_LOADER_URL_REPLACEMENT_15___ = _node_modules_css_loader_dist_runtime_
 var ___CSS_LOADER_URL_REPLACEMENT_16___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_3___default()(___CSS_LOADER_URL_IMPORT_16___);
 var ___CSS_LOADER_URL_REPLACEMENT_17___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_3___default()(___CSS_LOADER_URL_IMPORT_17___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `@font-face{font-family:"Work Sans";src:local("Worksans-Light");src:url(${___CSS_LOADER_URL_REPLACEMENT_0___}) format("woff2");src:url(${___CSS_LOADER_URL_REPLACEMENT_1___}) format("woff");font-display:swap;font-weight:300;font-style:normal}@font-face{font-family:"Work Sans";src:local("Worksans-Regular");src:url(${___CSS_LOADER_URL_REPLACEMENT_2___}) format("woff2");src:url(${___CSS_LOADER_URL_REPLACEMENT_3___}) format("woff");font-display:swap;font-weight:400;font-style:normal}@font-face{font-family:"Work Sans";src:local("Worksans-Medium");src:url(${___CSS_LOADER_URL_REPLACEMENT_4___}) format("woff2");src:url(${___CSS_LOADER_URL_REPLACEMENT_5___}) format("woff");font-display:swap;font-weight:500;font-style:normal}@font-face{font-family:"Work Sans";src:local("Worksans-Semibold");src:url(${___CSS_LOADER_URL_REPLACEMENT_6___}) format("woff2");src:url(${___CSS_LOADER_URL_REPLACEMENT_7___}) format("woff");font-display:swap;font-weight:600;font-style:normal}@font-face{font-family:"Work Sans";src:local("Worksans-Bold");src:url(${___CSS_LOADER_URL_REPLACEMENT_8___}) format("woff2");src:url(${___CSS_LOADER_URL_REPLACEMENT_9___}) format("woff");font-display:swap;font-weight:700;font-style:normal}@font-face{font-family:"Ubuntu";src:local("Ubuntu-Light");src:url(${___CSS_LOADER_URL_REPLACEMENT_10___}) format("woff2");src:url(${___CSS_LOADER_URL_REPLACEMENT_11___}) format("woff");font-display:swap;font-weight:300;font-style:normal}@font-face{font-family:"Ubuntu";src:local("Ubuntu-Regular");src:url(${___CSS_LOADER_URL_REPLACEMENT_12___}) format("woff2");src:url(${___CSS_LOADER_URL_REPLACEMENT_13___}) format("woff");font-display:swap;font-weight:400;font-style:normal}@font-face{font-family:"Ubuntu";src:local("Ubuntu-Medium");src:url(${___CSS_LOADER_URL_REPLACEMENT_14___}) format("woff2");src:url(${___CSS_LOADER_URL_REPLACEMENT_15___}) format("woff");font-display:swap;font-weight:500;font-style:normal}@font-face{font-family:"Ubuntu";src:local("Ubuntu-Bold");src:url(${___CSS_LOADER_URL_REPLACEMENT_16___}) format("woff2");src:url(${___CSS_LOADER_URL_REPLACEMENT_17___}) format("woff");font-display:swap;font-weight:700;font-style:normal}html{box-sizing:border-box}*,*::before,*::after{box-sizing:inherit;outline:none;outline-color:red}a{color:inherit;text-decoration:none}img,svg{max-width:100%;max-height:100%}body{min-width:320px;font-family:"Ubuntu",Arial,Verdana,sans-serif;color:#000}h1,h2,h3,h4,h5,h6,p,ul,ol,figure{margin:0}ul{margin:0;padding:0;list-style:none}button{padding:0;border:none;background-color:rgba(0,0,0,0);cursor:pointer}dl,dt,dd{margin:0}.none{display:none !important}.hidden{visibility:hidden !important}.notifications{position:fixed;right:15px;bottom:15px;z-index:100;display:flex;flex-direction:column;align-items:flex-end}.notifications__item{display:flex;align-items:center;border:1px solid;border-radius:7px;border-color:#d1d5db;background-color:#f3f4f6;max-width:600px;min-height:70px;padding:12px 16px 12px 14px;box-shadow:0px 5px 20px rgba(0,0,0,.25)}.notifications__item:not(:last-child){margin-bottom:15px}.notifications__item.warning{background-color:#f4f0e6;color:#d29718}.notifications__item.success{background-color:#e7f0e8;color:#76ca66}.notifications__item.error{background-color:#eddcdd;color:#ba0000}.notifications__item.info{background-color:#dce6f2;color:#649dff}.notifications__img{margin-right:13px;width:45px;height:45px}.notifications__text{margin-right:15px;font-size:16px;font-weight:400;line-height:24px}.notifications__btn{position:relative;display:block;width:24px;height:24px;margin-right:0;margin-left:auto}.notifications__btn::before,.notifications__btn::after{content:"";position:absolute;top:11px;left:3px;width:18px;height:2px;transform:rotate(45deg)}.warning .notifications__btn::before,.warning .notifications__btn::after{background-color:#d29718}.error .notifications__btn::before,.error .notifications__btn::after{background-color:#ba0000}.info .notifications__btn::before,.info .notifications__btn::after{background-color:#649dff}.success .notifications__btn::before,.success .notifications__btn::after{background-color:#76ca66}.notifications__btn::after{transform:rotate(-45deg)}.notifications__btn:hover{opacity:.6}.notifications__btn:active,.notifications__btn:focus{opacity:.8}`, ""]);
+___CSS_LOADER_EXPORT___.push([module.id, `@font-face{font-family:"Work Sans";src:local("Worksans-Light");src:url(${___CSS_LOADER_URL_REPLACEMENT_0___}) format("woff2");src:url(${___CSS_LOADER_URL_REPLACEMENT_1___}) format("woff");font-display:swap;font-weight:300;font-style:normal}@font-face{font-family:"Work Sans";src:local("Worksans-Regular");src:url(${___CSS_LOADER_URL_REPLACEMENT_2___}) format("woff2");src:url(${___CSS_LOADER_URL_REPLACEMENT_3___}) format("woff");font-display:swap;font-weight:400;font-style:normal}@font-face{font-family:"Work Sans";src:local("Worksans-Medium");src:url(${___CSS_LOADER_URL_REPLACEMENT_4___}) format("woff2");src:url(${___CSS_LOADER_URL_REPLACEMENT_5___}) format("woff");font-display:swap;font-weight:500;font-style:normal}@font-face{font-family:"Work Sans";src:local("Worksans-Semibold");src:url(${___CSS_LOADER_URL_REPLACEMENT_6___}) format("woff2");src:url(${___CSS_LOADER_URL_REPLACEMENT_7___}) format("woff");font-display:swap;font-weight:600;font-style:normal}@font-face{font-family:"Work Sans";src:local("Worksans-Bold");src:url(${___CSS_LOADER_URL_REPLACEMENT_8___}) format("woff2");src:url(${___CSS_LOADER_URL_REPLACEMENT_9___}) format("woff");font-display:swap;font-weight:700;font-style:normal}@font-face{font-family:"Ubuntu";src:local("Ubuntu-Light");src:url(${___CSS_LOADER_URL_REPLACEMENT_10___}) format("woff2");src:url(${___CSS_LOADER_URL_REPLACEMENT_11___}) format("woff");font-display:swap;font-weight:300;font-style:normal}@font-face{font-family:"Ubuntu";src:local("Ubuntu-Regular");src:url(${___CSS_LOADER_URL_REPLACEMENT_12___}) format("woff2");src:url(${___CSS_LOADER_URL_REPLACEMENT_13___}) format("woff");font-display:swap;font-weight:400;font-style:normal}@font-face{font-family:"Ubuntu";src:local("Ubuntu-Medium");src:url(${___CSS_LOADER_URL_REPLACEMENT_14___}) format("woff2");src:url(${___CSS_LOADER_URL_REPLACEMENT_15___}) format("woff");font-display:swap;font-weight:500;font-style:normal}@font-face{font-family:"Ubuntu";src:local("Ubuntu-Bold");src:url(${___CSS_LOADER_URL_REPLACEMENT_16___}) format("woff2");src:url(${___CSS_LOADER_URL_REPLACEMENT_17___}) format("woff");font-display:swap;font-weight:700;font-style:normal}html{box-sizing:border-box}*,*::before,*::after{box-sizing:inherit;outline:none;outline-color:red}a{color:inherit;text-decoration:none}img,svg{max-width:100%;max-height:100%;object-fit:contain}body{min-width:320px;font-family:"Ubuntu",Arial,Verdana,sans-serif;color:#000}h1,h2,h3,h4,h5,h6,p,ul,ol,figure{margin:0}ul{margin:0;padding:0;list-style:none}button{padding:0;border:none;background-color:rgba(0,0,0,0);cursor:pointer}dl,dt,dd{margin:0}.none{display:none !important}.hidden{visibility:hidden !important}.notifications{position:fixed;right:15px;bottom:15px;z-index:100;display:flex;flex-direction:column;align-items:flex-end}.notifications__item{display:flex;align-items:center;border:1px solid;border-radius:7px;border-color:#d1d5db;background-color:#f3f4f6;max-width:600px;min-height:70px;padding:12px 16px 12px 14px;box-shadow:0px 5px 20px rgba(0,0,0,.25)}.notifications__item:not(:last-child){margin-bottom:15px}.notifications__item.warning{background-color:#f4f0e6;color:#d29718}.notifications__item.success{background-color:#e7f0e8;color:#76ca66}.notifications__item.error{background-color:#eddcdd;color:#ba0000}.notifications__item.info{background-color:#dce6f2;color:#649dff}.notifications__img{margin-right:13px;width:45px;height:45px}.notifications__text{margin-right:15px;font-size:16px;font-weight:400;line-height:24px}.notifications__btn{position:relative;display:block;width:24px;height:24px;margin-right:0;margin-left:auto}.notifications__btn::before,.notifications__btn::after{content:"";position:absolute;top:11px;left:3px;width:18px;height:2px;transform:rotate(45deg)}.warning .notifications__btn::before,.warning .notifications__btn::after{background-color:#d29718}.error .notifications__btn::before,.error .notifications__btn::after{background-color:#ba0000}.info .notifications__btn::before,.info .notifications__btn::after{background-color:#649dff}.success .notifications__btn::before,.success .notifications__btn::after{background-color:#76ca66}.notifications__btn::after{transform:rotate(-45deg)}.notifications__btn:hover{opacity:.6}.notifications__btn:active,.notifications__btn:focus{opacity:.8}`, ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -2343,7 +2343,7 @@ module.exports = __webpack_require__.p + "fonts\\Worksans-Semibold.2f885f6aac37f
 /******/ 	
 /******/ 	/* webpack/runtime/publicPath */
 /******/ 	(() => {
-/******/ 		__webpack_require__.p = "/";
+/******/ 		__webpack_require__.p = "/Webpack-template/";
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/jsonp chunk loading */
@@ -3180,22 +3180,9 @@ function createPageUnknown() {
   const text = el('p.dynamic-text', 'СТРАНИЦА НЕ НАЙДЕНА!');
   updatePageContent(text);
 }
-;// CONCATENATED MODULE: ./src/js/pages/createPageMain.js
-
-
-
-function createPageMain() {
-  const text = el('p.dynamic-text', 'Проект собран на Webpack');
-  const btn = el('button.btn-unknown', 'НАЖМИ МЕНЯ');
-  btn.addEventListener('click', () => {
-    routing_router.navigate('/abcdefg');
-  });
-  const wrapper = el('.main-wrapper');
-  setChildren(wrapper, [text, btn]);
-  updatePageContent(wrapper);
-}
 ;// CONCATENATED MODULE: ./src/js/constants.js
 const DOCTITLE = 'MYSITE';
+const REPONAME = 'Webpack-template';
 const PAGES = [{
   name: 'unknown',
   title: 'Страница не найдена'
@@ -3215,6 +3202,26 @@ function getPageByName(name) {
 function updateDocumentTitle(pageName) {
   const pageTitle = getPageByName(pageName)?.title;
   document.title = `${DOCTITLE} - ${pageTitle ?? 'Страница не найдена'}`;
+}
+
+// ! добавление к имени страницы исходного репозитория проекта! ОБЯЗАТЕЛЬНО ИСПОЛЬЗОВАТЬ в router.navigate!!!
+function getPagePath(page) {
+  return `/${REPONAME}/${page.trim()}`;
+}
+;// CONCATENATED MODULE: ./src/js/pages/createPageMain.js
+
+
+
+
+function createPageMain() {
+  const text = el('p.dynamic-text', 'Проект собран на Webpack');
+  const btn = el('button.btn-unknown', 'НАЖМИ МЕНЯ');
+  btn.addEventListener('click', () => {
+    routing_router.navigate(getPagePath('adfadsf'));
+  });
+  const wrapper = el('.main-wrapper');
+  setChildren(wrapper, [text, btn]);
+  updatePageContent(wrapper);
 }
 ;// CONCATENATED MODULE: ./src/js/pages/createPage.js
 
@@ -3237,7 +3244,7 @@ function createPage(name) {
 const routing_router = new (navigo_min_default())('/');
 
 // ! демонстрация плагина redom
-routing_router.on('/', () => createPage('main'))
+routing_router.on('/Webpack-template/', () => createPage('main'))
 // .on('/page/:id', (data) => {
 //   // ? страница с параметрами
 //   mainApp.innerHTML = '';
