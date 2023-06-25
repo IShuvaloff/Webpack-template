@@ -9,6 +9,59 @@
 5. Подготовительные действия перед деплоем: `npm run predeploy` (вызывается автоматически во время деплоя, см. п.6);
 6. Деплой проекта на gh-pages: `npm run deploy`.
 
+## Настройка исходных данных проекта
+
+С целью выкладывания на ***gh-pages*** следует изменить и синхронизировать параметры исходной страницы при запуске приложения в нескольких местах:
+    1. установить *плагин gh-pages*: `npm i -D gh-pages`;
+    2. файл *package.json*: добавить настройку адреса выкладывания build-версии приложения с именем репозитория Github:
+
+      ```json
+      "repository": {
+        "url": "git+<https://github.com/IShuvaloff/Webpack-template.git>"
+      },
+      ```
+
+    3. файл *package.json*: добавить скрипт подготовки деплоя:
+
+      ```json
+      "scripts": {
+        ...
+        "predeploy": "npm run build", // действия перед деплоем
+        "deploy": "gh-pages -d dist" // использование папки dist для выкладки на gh-pages
+      },
+      ```
+
+    4. файл *webpack.config.js*: изменить `output.publicPath` на имя репозитория Github:
+
+      ```js
+      const output = {
+        ...
+        publicPath: '/Webpack-template/', // исходная папка для запуска index.html
+        ...
+      };
+      ```
+
+    5. файл *src/js/routing.js*: изменить исходную директорию запуска главной страницы на имя репозитория Github:
+
+      ```js
+      router.on('/Webpack-template/', () => createPage('main'))
+      ```
+
+    6. файл *src/js/contants.js*: изменить константу REPONAME на имя репозитория Github:
+
+      ```js
+      export const REPONAME = 'Webpack-template';
+      ```
+
+    7. при использовании навигатора `router.navigate()` ОБЯЗАТЕЛЬНО использовать функцию `getPagePath` из `src/js/utils` с целью подстановки имени репозитория Github к каждому маршруту:
+
+      ```js
+      router.navigate(getPagePath('pageName'));
+      ```
+
+    8. после этих изменений открытие приложения в режиме разработки (`npm run serve`) будет открывать сайт сразу на нужной исходной позиции (без необходимости изменять адрес в браузере вручную), при финальной сборке все исходные адреса скриптов и вложений будут предваряться нужной директорией, а *при деплое в созданную ветку gh-pages будет выкладываться build-версия приложения*;
+    9. для создания веб-страницы проекта на gh-pages требуется зайти в настройки репозитория на github, выбрать пункт [Pages](https://github.com/IShuvaloff/Webpack-template/settings/pages), в разделе Builds and deployment выбрать в качестве источника "Deploy from a branch" и в поле с веткой указать gh-pages.
+
 ## Структура и содержимое шаблона
 
 1. **Конвертер Babel** - конвертация js-кода ECMAScript 2015+ в совместимый со старыми браузерами формат. [Конфигурационные файлы](https://babeljs.io/docs/config-files) Babel:
@@ -44,56 +97,6 @@
     3. оптимизация изображений:
         * [ImageMinimizerPlugin](https://webpack.js.org/plugins/image-minimizer-webpack-plugin/) - с плагинами для минификации svg, png, jpeg и gif;
     4. запуск сервера devServer на порту 9000;
-    5. с целью выкладывания на ***gh-pages*** следует изменить и синхронизировать параметры исходной страницы при запуске приложения в трех местах:
-        * установить *плагин gh-pages*: `npm i -D gh-pages`;
-        * файл *package.json*: добавить настройку адреса выкладывания build-версии приложения с именем репозитория Github:
-
-          ```json
-          "repository": {
-            "url": "git+<https://github.com/IShuvaloff/Webpack-template.git>"
-          },
-          ```
-
-        * файл *package.json*: добавить скрипт подготовки деплоя:
-
-          ```json
-          "scripts": {
-            ...
-            "predeploy": "npm run build", // действия перед деплоем
-            "deploy": "gh-pages -d dist" // использование папки dist для выкладки на gh-pages
-          },
-          ```
-
-        * файл *webpack.config.js*: изменить `output.publicPath` на имя репозитория Github:
-
-          ```js
-          const output = {
-            ...
-            publicPath: '/Webpack-template/', // исходная папка для запуска index.html
-            ...
-          };
-          ```
-
-        * файл *src/js/routing.js*: изменить исходную директорию запуска главной страницы на имя репозитория Github:
-
-          ```js
-          router.on('/Webpack-template/', () => createPage('main'))
-          ```
-
-        * файл *src/js/contants.js*: изменить константу REPONAME на имя репозитория Github:
-
-          ```js
-          export const REPONAME = 'Webpack-template';
-          ```
-
-        * при использовании навигатора `router.navigate()` ОБЯЗАТЕЛЬНО использовать функцию `getPagePath` из `src/js/utils` с целью подстановки имени репозитория Github к каждому маршруту:
-
-          ```js
-          router.navigate(getPagePath('pageName'));
-          ```
-
-        * после этих изменений открытие приложения в режиме разработки (`npm run serve`) будет открывать сайт сразу на нужной исходной позиции (без необходимости изменять адрес в браузере вручную), при финальной сборке все исходные адреса скриптов и вложений будут предваряться нужной директорией, а *при деплое в созданную ветку gh-pages будет выкладываться build-версия приложения*;
-        * для создания веб-страницы проекта на gh-pages требуется зайти в настройки репозитория на github, выбрать пункт [Pages](https://github.com/IShuvaloff/Webpack-template/settings/pages), в разделе Builds and deployment выбрать в качестве источника "Deploy from a branch" и в поле с веткой указать gh-pages.
 
 6. **Нормализация стилей Normalize.css** - использование [плагина](https://www.npmjs.com/package/normalize.css) (вместо загруженного файла) с последующим импортом CSS-файла `@import 'normalize.css'` в файле main.sass. Следует заметить, что *операция `@import` внутри файлов sass позволяет импортировать как файлы стилей sass/scss, так и файлы стилей на чистом css*. Дополнительно:
     * использование следом дополнительного файла сброса стилей `src/sass/init/_reset.sass`;
