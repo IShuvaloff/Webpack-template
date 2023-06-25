@@ -1,11 +1,12 @@
 import Navigo from 'navigo';
 import createPage from './pages/createPage';
+import { REPONAME } from './constants';
 
 const router = new Navigo('/');
 
 // ! демонстрация плагина redom
 router
-  .on('/Webpack-template/', () => createPage('main'))
+  .on(`/${REPONAME}/`, () => createPage('main'))
   // .on('/page/:id', (data) => {
   //   // ? страница с параметрами
   //   mainApp.innerHTML = '';
