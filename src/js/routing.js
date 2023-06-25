@@ -5,7 +5,7 @@ const router = new Navigo('/');
 
 // ! демонстрация плагина redom
 router
-  .on('/', () => createPage('main'))
+  .on('/Webpack-template/', () => createPage('main'))
   // .on('/page/:id', (data) => {
   //   // ? страница с параметрами
   //   mainApp.innerHTML = '';

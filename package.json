@@ -1,10 +1,13 @@
 {
   "name": "memo",
   "version": "1.0.0",
-  "description": "Игра МЕМО",
+  "repository": {
+    "url": "git+<https://github.com/IShuvaloff/Webpack-template.git>"
+  },
+  "description": "Шаблон Webpack-приложения",
   "main": "index.js",
   "scripts": {
-    "serve": "webpack serve --open --mode development",
+    "serve": "webpack serve --open /Webpack-template/ --mode development",
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
     "predeploy": "npm run build",
