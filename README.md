@@ -78,6 +78,18 @@
           router.on('/Webpack-template/', () => createPage('main'))
           ```
 
+        * файл *src/js/contants.js*: изменить константу REPONAME на имя репозитория Github:
+
+          ```js
+          export const REPONAME = 'Webpack-template';
+          ```
+
+        * при использовании навигатора `router.navigate()` ОБЯЗАТЕЛЬНО использовать функцию `getPagePath` из `src/js/utils` с целью подстановки имени репозитория Github к каждому маршруту:
+
+          ```js
+          router.navigate(getPagePath('pageName'));
+          ```
+
         * после этих изменений открытие приложения в режиме разработки (`npm run serve`) будет открывать сайт сразу на нужной исходной позиции (без необходимости изменять адрес в браузере вручную), при финальной сборке все исходные адреса скриптов и вложений будут предваряться нужной директорией, а *при деплое в созданную ветку gh-pages будет выкладываться build-версия приложения*;
         * для создания веб-страницы проекта на gh-pages требуется зайти в настройки репозитория на github, выбрать пункт [Pages](https://github.com/IShuvaloff/Webpack-template/settings/pages), в разделе Builds and deployment выбрать в качестве источника "Deploy from a branch" и в поле с веткой указать gh-pages.
 

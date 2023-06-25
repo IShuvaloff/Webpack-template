@@ -1,4 +1,5 @@
 export const DOCTITLE = 'MYSITE';
+export const REPONAME = 'Webpack-template';
 
 export const PAGES = [
   {
