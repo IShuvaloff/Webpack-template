@@ -111,4 +111,9 @@
         * вызов окна уведомления - `showNotification('Текст сообщения', 'success/error/warning/info')`;
     5. *TODO*: добавить анимацию появления и сокрытия уведомлений;
 
-11. *TODO*: Система авторизации.
+11. [**Постпроцессинг CSS**](https://webpack.js.org/loaders/postcss-loader/) - использование плагинов `postcss`, `postcss-loader`, `postcss-js` (для обработки CSS-in-JS) и `postcss-preset-env` для постпроцессинга:
+    1. в файле `webpack.config.js` используется `postcss-loader` как первый этап обработки CSS (или второй при обработке sass);
+    2. настройка работы `postcss` описана в файле `postcss.config.js`, считываемом автоматически при подключении плагина;
+    3. *TODO*: проверить работоспособность в iOS!
+
+12. *TODO*: Система авторизации.
